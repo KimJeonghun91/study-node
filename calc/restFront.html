@@ -1,25 +1,67 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="utf-8" />
-  <title>RESTful SERVER</title>
+  <title>계산기</title>
   <link rel="stylesheet" href="./restFront.css" />
 </head>
-<body>
-<div>
-  <form id="form">
-    <input type="text" id="num1">
-    <select id='cal'>
-      <option value='plus'>+</option>
-      <option value='minus'>-</option>
-      <option value='multi'>*</option>
-    </select>
-    <input type="text" id="num2">
-    <button type="submit">계산</button>
-  </form>
-</div>
-<div id="list"></div>
-<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-<script src="./restFront.js"></script>
+
+<style>
+
+</style>
+
+
+<body
+  style="display:flex; width: 100vh; height: 100vh; flex:1; padding: 0px; margin: 0px; background-color:black; justify-content: center; align-items: center;">
+
+
+  <div class="container">
+    <div class="topWrap">
+      <p class="pFormula">55+</p>
+      <p class="pViewer">55+</p>
+    </div>
+
+    <div class="row">
+      <div class="btnWrap">/</div>
+      <div class="btnWrap">*</div>
+      <div class="btnWrap">-</div>
+      <div class="btnWrap">+</div>
+    </div>
+
+    <div class="row">
+      <div class="btnNoWrap">7</div>
+      <div class="btnNoWrap">8</div>
+      <div class="btnNoWrap">9</div>
+      <div class="btnWrap">del</div>
+    </div>
+
+    <div class="row">
+      <div class="btnNoWrap">4</div>
+      <div class="btnNoWrap">5</div>
+      <div class="btnNoWrap">6</div>
+      <div class="btnWrap">C</div>
+    </div>
+
+    <div class="row">
+      <div class="btnNoWrap">1</div>
+      <div class="btnNoWrap">2</div>
+      <div class="btnNoWrap">3</div>
+      <div class="btnWrap"></div>
+    </div>
+
+    <div class="row">
+      <div class="btnNoWrap"></div>
+      <div class="btnNoWrap">0</div>
+      <div class="btnNoWrap"></div>
+      <div class="btnWrap" style="background-color:rgb(63, 63, 221)">=</div>
+    </div>
+  </div>
+
+
+
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="./restFront.js"></script>
 </body>
+
 </html>

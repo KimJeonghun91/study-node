@@ -1,1 +1,98 @@
 a { color: blue; text-decoration: none; }
+p {
+    margin: 0px;
+    padding: 0px;
+  }
+
+  div {
+    -ms-user-select: none;
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+
+  .container {
+    display: flex;
+    width: 320px;
+    height: 420px;
+    background-color: rgb(204, 204, 204);
+    flex-direction: column;
+  }
+
+  .topWrap {
+    display: flex;
+    width: 100%;
+    background-color: rgb(204, 204, 204);
+    flex-direction: column;
+  }
+
+  .pFormula {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding-right: 15px;
+    margin-top: 10px;
+  }
+
+  .pViewer {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding-right: 15px;
+    font-size: xx-large;
+    font-weight: bold;
+    margin: 5px 0px;
+  }
+
+  .btnWrap {
+    display: flex;
+    width: 24.3%;
+    height: 65px;
+    background-color: rgb(216, 216, 216);
+    font-size: large;
+    color: black;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .btnWrap:hover {
+    opacity: 0.5;
+  }
+
+  .btnWrap:active {
+    opacity: 1;
+    background-color: orange;
+  }
+
+  .btnNoWrap {
+    display: flex;
+    width: 24.3%;
+    height: 65px;
+    background-color: rgb(233, 233, 233);
+    font-size: large;
+    color: black;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .btnNoWrap:hover {
+    opacity: 0.5;
+  }
+
+  .btnNoWrap:active {
+    opacity: 1;
+    background-color: orange;
+  }
+
+  .row {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 3px;
+  }
