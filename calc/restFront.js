@@ -1,4 +1,6 @@
 let txtView = "";
+let txtSubView = "0"
+let arrStack = [];
 
 function btnNum(arg) {
   txtView = txtView + arg;
@@ -6,11 +8,12 @@ function btnNum(arg) {
 }
 
 function btnDel() {
-  txtView = txtView.slice(0,-1); 
+ 
   if(txtView.length === 0){
     document.getElementById('pView').innerHTML = '0';
   }else{
-    document.getElementById('pView').innerHTML = txtView;
+    txtView = txtView.slice(0,-1); 
+    document.getElementById('pView').innerHTML = txtView.length === 0 ? '0' : txtView;
   }
 }
 
@@ -19,5 +22,15 @@ function btnClear() {
 }
 
 function btnCalc(arg) {
-	
+  arrStack.push(txtView);
+  arrStack.push(arg);
+
+  let subViewTxt = "";
+  arrStack.forEach(arg => {
+    subViewTxt = subViewTxt + arg;
+  });
+
+  txtView = "";
+  document.getElementById('pView').innerHTML = '0';
+  document.getElementById('pSub').innerHTML = subViewTxt;
 }
