@@ -31,9 +31,10 @@ http.createServer(async (req, res) => {
         req.on('data', (data) => { body += data; });
         // 요청의 body를 다 받은 후 실행됨
         return req.on('end', () => {
-          console.log('POST 본문(Body):', body);
+          console.log('>>>>>>> plus 요청:', body);
           const { num1, num2 } = JSON.parse(body);
           const result = Number(num1) + Number(num2);
+          console.log('<<<<<<< plus 결과:', String(result));
           res.end(String(result));
         });
 
@@ -44,7 +45,7 @@ http.createServer(async (req, res) => {
         req.on('data', (data) => { body += data; });
         // 요청의 body를 다 받은 후 실행됨
         return req.on('end', () => {
-          console.log('POST 본문(Body):', body);
+          console.log('>>>>>>> minus 요청:', body);
           const { num1, num2 } = JSON.parse(body);
           const result = Number(num1) - Number(num2);
           res.end(String(result));
@@ -57,9 +58,21 @@ http.createServer(async (req, res) => {
         req.on('data', (data) => { body += data; });
         // 요청의 body를 다 받은 후 실행됨
         return req.on('end', () => {
-          console.log('POST 본문(Body):', body);
+          console.log('>>>>>>> multi 요청:', body);
           const { num1, num2 } = JSON.parse(body);
           const result = Number(num1) * Number(num2);
+          res.end(String(result));
+        });
+
+      } else if (req.url === '/dvs') {
+        let body = '';
+        // 요청의 body를 stream 형식으로 받음
+        req.on('data', (data) => { body += data; });
+        // 요청의 body를 다 받은 후 실행됨
+        return req.on('end', () => {
+          console.log('>>>>>>> dvs 요청:', body);
+          const { num1, num2 } = JSON.parse(body);
+          const result = Number(num1) / Number(num2);
           res.end(String(result));
         });
       }
