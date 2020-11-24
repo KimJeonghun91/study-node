@@ -1,12 +1,8 @@
 // ************************************
 // ******* node restServer ************
 // ************************************
-
-
 const http = require('http');
 const fs = require('fs').promises;
-
-const users = {}; // 데이터 저장용
 
 http.createServer(async (req, res) => {
   try {
@@ -27,23 +23,19 @@ http.createServer(async (req, res) => {
     } else if (req.method === 'POST') {
       if (req.url === '/plus') {
         let body = '';
-        // 요청의 body를 stream 형식으로 받음
         req.on('data', (data) => { body += data; });
-        // 요청의 body를 다 받은 후 실행됨
         return req.on('end', () => {
           console.log('>>>>>>> plus 요청:', body);
           const { num1, num2 } = JSON.parse(body);
           const result = Number(num1) + Number(num2);
-          console.log('<<<<<<< plus 결과:', String(result));
           res.end(String(result));
         });
 
 
       } else if (req.url === '/minus') {
         let body = '';
-        // 요청의 body를 stream 형식으로 받음
         req.on('data', (data) => { body += data; });
-        // 요청의 body를 다 받은 후 실행됨
+
         return req.on('end', () => {
           console.log('>>>>>>> minus 요청:', body);
           const { num1, num2 } = JSON.parse(body);
@@ -54,9 +46,8 @@ http.createServer(async (req, res) => {
 
       } else if (req.url === '/multi') {
         let body = '';
-        // 요청의 body를 stream 형식으로 받음
         req.on('data', (data) => { body += data; });
-        // 요청의 body를 다 받은 후 실행됨
+
         return req.on('end', () => {
           console.log('>>>>>>> multi 요청:', body);
           const { num1, num2 } = JSON.parse(body);
@@ -64,11 +55,11 @@ http.createServer(async (req, res) => {
           res.end(String(result));
         });
 
+        
       } else if (req.url === '/dvs') {
         let body = '';
-        // 요청의 body를 stream 형식으로 받음
         req.on('data', (data) => { body += data; });
-        // 요청의 body를 다 받은 후 실행됨
+
         return req.on('end', () => {
           console.log('>>>>>>> dvs 요청:', body);
           const { num1, num2 } = JSON.parse(body);

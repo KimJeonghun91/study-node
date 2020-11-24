@@ -10,7 +10,6 @@ function btnNum(arg) {
 }
 
 function btnDel() {
-
   if (txtView.length === 0) {
     document.getElementById('pView').innerHTML = '0';
   } else {
