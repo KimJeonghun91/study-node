@@ -18,7 +18,7 @@ function btnDel() {
     document.getElementById('pView').innerHTML = txtView.length === 0 ? '0' : txtView;
   }
 }
-
+ 
 function btnClear() {
   isOverayCalc = false;
   txtView = "";
