@@ -27,7 +27,7 @@ function btnClear() {
   document.getElementById('pSub').innerHTML = '0';
 }
 
-function btnCalc(arg) {
+function btnCalc(arg) { 
   if(isOverayCalc){return}
 
   arrStack.push(txtView);
