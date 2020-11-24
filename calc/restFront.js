@@ -1,24 +1,23 @@
-document.getElementById('form').addEventListener('submit', async (e) => {
-  e.preventDefault();
-  const num1 = e.target.num1.value;
-  const num2 = e.target.num2.value;
-  const cal = e.target.cal.value;
-  if (!num1) { return alert('num1 입력하세요'); }
-  if (!num2) { return alert('num2 입력하세요'); }
+let txtView = "";
 
-  try {
-    let result = "";
-    if (cal === 'plus') {
-      result = await axios.post('/plus', { num1, num2 });
-    } else if (cal === 'minus') {
-      result = await axios.post('/minus', { num1, num2 });
-    } else if (cal === 'multi') {
-      result = await axios.post('/multi', { num1, num2 });
-    }
+function btnNum(arg) {
+  txtView = txtView + arg;
+  document.getElementById('pView').innerHTML = txtView;
+}
 
-    alert('결과 : ' + JSON.stringify(result.data))
-  } catch (err) {
-    console.error(err);
+function btnDel() {
+  txtView = txtView.slice(0,-1); 
+  if(txtView.length === 0){
+    document.getElementById('pView').innerHTML = '0';
+  }else{
+    document.getElementById('pView').innerHTML = txtView;
   }
-  e.target.username.value = '';
-});
+}
+
+function btnClear() {
+  document.getElementById('pView').innerHTML = '0';
+}
+
+function btnCalc(arg) {
+	
+}

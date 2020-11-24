@@ -19,7 +19,7 @@
   <div class="container">
     <div class="topWrap">
       <p class="pFormula">55+</p>
-      <p class="pViewer">55+</p>
+      <p id="pView" class="pViewer">0</p>
     </div>
 
     <div class="row">
@@ -30,29 +30,29 @@
     </div>
 
     <div class="row">
-      <div class="btnNoWrap">7</div>
-      <div class="btnNoWrap">8</div>
-      <div class="btnNoWrap">9</div>
-      <div class="btnWrap">del</div>
+      <div class="btnNoWrap" onclick="btnNum('7');">7</div>
+      <div class="btnNoWrap" onclick="btnNum('8');">8</div>
+      <div class="btnNoWrap" onclick="btnNum('9');">9</div>
+      <div class="btnWrap" onclick="btnDel();">del</div>
     </div>
 
     <div class="row">
-      <div class="btnNoWrap">4</div>
-      <div class="btnNoWrap">5</div>
-      <div class="btnNoWrap">6</div>
-      <div class="btnWrap">C</div>
+      <div class="btnNoWrap" onclick="btnNum('4');">4</div>
+      <div class="btnNoWrap" onclick="btnNum('5');">5</div>
+      <div class="btnNoWrap" onclick="btnNum('6');">6</div>
+      <div class="btnWrap" onclick="btnClear();">C</div>
     </div>
 
     <div class="row">
-      <div class="btnNoWrap">1</div>
-      <div class="btnNoWrap">2</div>
-      <div class="btnNoWrap">3</div>
+      <div class="btnNoWrap" onclick="btnNum('1');">1</div>
+      <div class="btnNoWrap" onclick="btnNum('2');">2</div>
+      <div class="btnNoWrap" onclick="btnNum('3');">3</div>
       <div class="btnWrap"></div>
     </div>
 
     <div class="row">
       <div class="btnNoWrap"></div>
-      <div class="btnNoWrap">0</div>
+      <div class="btnNoWrap" onclick="btnNum('0');">0</div>
       <div class="btnNoWrap"></div>
       <div class="btnWrap" style="background-color:rgb(63, 63, 221)">=</div>
     </div>
