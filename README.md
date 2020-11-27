@@ -1,2 +1,8 @@
 # 계산기
-![화면-기록-2020-11-24-오후-7 01 10](https://user-images.githubusercontent.com/39161206/100079289-cfff2680-2e87-11eb-8a9d-390a8e8b6584.gif)
+> cd calc
+>
+> node reserSrver
+
+
+![화면-기록-2020-11-27-오전-11 07 08](https://user-images.githubusercontent.com/39161206/100403000-fea41980-30a0-11eb-8eaa-b06cc98d1331.gif)
+
